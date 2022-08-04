@@ -101,6 +101,7 @@ public class Main {
             for (String value : s) {
                 list.add("Games/savegames/" + value);
             }
+        }
 
             try (ZipOutputStream zipOut = new ZipOutputStream(new FileOutputStream(zipPath))) {
                 for (String filePath : list) {
@@ -119,7 +120,6 @@ public class Main {
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
             }
-        }
 
         for (String s : list) {
             if (!s.endsWith("zip")) {
